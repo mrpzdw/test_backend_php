@@ -27,6 +27,7 @@ function displayGroups($pdo, $parentId, $openGroups) {
         echo '</ul>';
     }
 }
+//Вывод групп товаров первого уровня
 echo '<ul><li><a href="?group=0&open=' . implode(',', $openGroups) . '">Все товары</a></li>';
 displayGroups($pdo, 0, $openGroups);
 echo '</ul>';
