@@ -47,7 +47,7 @@ function getProductCount($pdo, $groupId) {
     return $stmt->fetchColumn();
 }
 
-//Вывод товаров
+//Вывод списка товаров
 if ($groupId === 0) {
     $stmt = $pdo->query("SELECT * FROM products");
     $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
