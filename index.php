@@ -7,8 +7,7 @@ try {
 }
 $groupId = (int)($_GET['group'] ?? 0);
 $openGroups = isset($_GET['open']) ? explode(',', $_GET['open']) : [];
-//111
-$openGref = 100;
+
 //Рекурсивная функция для отображения групп
 function displayGroups($pdo, $parentId, $openGroups) {
     $stmt = $pdo->prepare("SELECT * FROM groups WHERE id_parent = :parent_id");
